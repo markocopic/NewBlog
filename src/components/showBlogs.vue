@@ -6,8 +6,9 @@
     </header>
     <input type="text" v-model="search" placeholder="search blogs">
     <div v-for="blog in filteredBlogs" class="single-blog">
-      <router-link v-bind:to="'/blog/' + blog.id"><h2>{{blog.title}}</h2></router-link>
-      <p>{{blog.body}}</p>
+      <img class="images" :src=blog.imgurl alt="Nature">
+      <router-link v-bind:to="'/blog/' + blog.blog_id"><h2>{{blog.blog_name}}</h2></router-link>
+      <p>{{blog.blog_text | skrati }} ...</p>
     </div>
   </div>
 </template>
@@ -26,8 +27,9 @@ export default {
 
   },
   mounted(){
-    this.$http.get('https://jsonplaceholder.typicode.com/posts').then(function(data){
-      this.blogs = data.body.slice(0,10);
+    axios.get('http://739k121.mars-e1.mars-hosting.com/zadatak/js/allBlogs.js').then(response => {
+      //console.log(response.data.all);
+      this.blogs = response.data.all;
     });
   },
   computed:{

@@ -11,6 +11,11 @@ const router = new VueRouter({
 });
 
 Vue.use(VueResource);
+
+Vue.filter('skrati',function(value){
+  return value.slice(0,250);
+});
+
 Vue.directive('theme',{
   bind(el,binding,vnode){
     if(binding.value == 'wide'){
