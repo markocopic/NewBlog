@@ -1,6 +1,9 @@
 <template>
   <div id="showBlogs" v-theme:column="'narrow'">
-    <h1>All Blogs Articles</h1>
+    <header class="w3-container w3-center w3-padding-32">
+      <h1><b>G-log</b></h1>
+      <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
+    </header>
     <input type="text" v-model="search" placeholder="search blogs">
     <div v-for="blog in filteredBlogs" class="single-blog">
       <router-link v-bind:to="'/blog/' + blog.id"><h2>{{blog.title}}</h2></router-link>
