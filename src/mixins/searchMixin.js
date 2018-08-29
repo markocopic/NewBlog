@@ -3,7 +3,7 @@ export default {
     filteredBlogs(){
       return this.blogs.filter((blog)=>{
 
-        return blog.blog_name.match(this.search);
+        return blog.blog_name.toLowerCase().match(this.search);
       });
     }
   }
