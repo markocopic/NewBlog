@@ -11,7 +11,7 @@
         <input type="checkbox" v-model="blog.categories" value="ninjas">
         <label>Wizards</label>
         <input type="checkbox" v-model="blog.categories" value="wizards">
-        <label>Marios</label>
+        <label>Mario-blblb</label>
         <input type="checkbox" v-model="blog.categories" value="mario">
         <label>Yoshi</label>
         <input type="checkbox" v-model="blog.categories" value="yoshi">
