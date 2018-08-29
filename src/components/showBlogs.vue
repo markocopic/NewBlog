@@ -1,6 +1,6 @@
 <template>
   <div id="showBlogs" v-theme:column="'wide'">
-    <header class="w3-container w3-center w3-padding-32">
+    <header id="head" class="w3-container w3-center w3-padding-32">
       <h1><b>G-log</b></h1>
       <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
     </header>
@@ -53,5 +53,9 @@ export default {
 #input{
   max-width: 50%;
   margin: 0 auto;
+}
+#head{
+  margin: 0 auto;
+  text-align: center;
 }
 </style>
