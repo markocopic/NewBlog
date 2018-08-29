@@ -1,7 +1,7 @@
 <template>
   <div id="showBlogs" v-theme:column="'wide'">
     <header id="head" class="w3-container w3-center w3-padding-32">
-      <h1><b>b.log( )</b></h1>
+      <h1><b><span id="blue">b</span>.<span id="red">log</span>( )</b></h1>
       <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
     </header>
     <input type="text" v-model="search" placeholder="search blogs" id="input">
@@ -60,5 +60,11 @@ export default {
 }
 h1{
   font-size: 48px;
+}
+#blue{
+  color: blue;
+}
+#red{
+  color: red;
 }
 </style>
